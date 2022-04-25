@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-image: url("../imgs/wave.png"); /*I drew up a quick asset for this.*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 300;
+}
+
+/*************************************
+        nav bar
+**************************************/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #00a2a9;
+}
+
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+.logo {
+    float: right;
+    padding: 10px 0;
+}
+
+nav {
+    float: left;
+    padding-bottom: 20px;
+}
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-left: 100px;
+        padding-top: 0px;
+        position: relative;
+    }
+
+    nav a {
+        color: #444;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        nav a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            background-color: #444;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in-out 250ms;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+/*******************************************
+        Page content/container
+********************************************/
+.text_pad { /*text decor for header*/
+    
+    text-decoration: underline double;
+    text-decoration-thickness: 1px;
+    font-weight: 200;
+    text-align: left;
+    padding-left: 25px;
+    color: ghostwhite;
+}
+
+.text_con { /*style for content container*/
+    
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-bottom: 20%;
+    height: 400px;
+    width: 60%;
+    border: none;
+    overflow: auto;
+    background-color: ghostwhite;
+    border-radius: 20px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid #055d5e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #055d5e;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #88ba1c;
+    }
+/*******************************************
+        Table of Contents
+********************************************/
+#toc_con { /*table of contents container*/
+    background: #f9f9f9 none repeat scroll 0 0;
+    border-radius: 20px;
+    float: right;
+    display: table;
+    margin-top: 95px;
+    margin-right: 20px;
+    margin-bottom: 1em;
+    padding-top: 20px;
+    width: 30%;
+}
+
+.toc_title { /*text decor for table of contents title*/
+    font-weight: 400;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li { /*ordering style of toc*/
+    list-style: outside none none !important;
+}
+
+
+/*************************************
+    Footer
+**************************************/
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #00a2a9;
+}
